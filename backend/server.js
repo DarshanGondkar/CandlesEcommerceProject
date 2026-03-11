@@ -21,7 +21,7 @@ const app = express();
 //app.use(cors());
 
 app.use(cors({
-  origin: "https://candlesecommerceproject.onrender.com/"
+  origin: "https://candlesecommerceproject.netlify.app"
 }));
 app.use(express.json());
 
