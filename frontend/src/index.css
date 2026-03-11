@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols FIX */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* No scrollbar (used in design) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.form-label {
+  @apply block text-[11px] uppercase tracking-widest text-black/40 mb-1;
+}
+
+.form-input {
+  @apply w-full bg-black/5 border border-black/10 rounded-lg px-4 py-3.5 text-sm text-black
+  focus:outline-none focus:border-black/40 transition-all;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Only allow hover effects on devices that actually support hover */
+
+
+
+/* LIGHT THEME (Default) */
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f6f8f6;
+  --color-text: #28282B ;
+  --color-muted: #6b7280;
+  --color-primary: #e68d19;
+  --color-border: #e5e7eb;
+}
+
+/* DARK THEME */
+.dark {
+  --color-bg: #152111;
+  --color-surface: #1c2a16;
+  --color-text: #ffffff;
+  --color-muted: #9ca3af;
+  --color-primary: #49e619;
+  --color-border: #2e3a28;
+}
+
+/*animation*/
+@keyframes flameFlicker {
+  0% { transform: scale(1) translateY(0); opacity: 1; }
+  25% { transform: scale(1.05) translateY(-1px); opacity: 0.9; }
+  50% { transform: scale(0.95) translateY(1px); opacity: 1; }
+  75% { transform: scale(1.08) translateY(-1px); opacity: 0.95; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.flame {
+  animation: flameFlicker 1.2s infinite ease-in-out;
+}
+@keyframes burn {
+  0%   { transform: translateX(-50%) scale(1,1); }
+  25%  { transform: translateX(-50%) scale(1.05,0.95); }
+  50%  { transform: translateX(-50%) scale(0.95,1.05); }
+  75%  { transform: translateX(-50%) scale(1.03,0.97); }
+  100% { transform: translateX(-50%) scale(1,1); }
+}
+
+@keyframes flicker {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.flame-wrapper {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  width: 16px;
+  height: 28px;
+  transform: translateX(-50%);
+}
+
+.flame-outer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 80%, #ffae00 0%, #ff6a00 60%, transparent 70%);
+  border-radius: 50% 50% 40% 40%;
+  filter: blur(2px);
+  animation: burn 0.9s infinite ease-in-out;
+}
+
+.flame-inner {
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  top: 20%;
+  left: 20%;
+  background: radial-gradient(circle at 50% 70%, #fff8c6 0%, #ffd000 70%);
+  border-radius: 50% 50% 40% 40%;
+  animation: flicker 0.6s infinite ease-in-out;
+}
+
+/*menu bar*/
+
