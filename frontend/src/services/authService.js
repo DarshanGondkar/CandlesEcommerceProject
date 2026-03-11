@@ -2,7 +2,7 @@ import axios from "axios";
 import { isAuthenticated } from "../utils/auth";
 //import { getToken } from "../utils/auth";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://candlesecommerceproject.onrender.com/api";
 
 
 //RegistrationPage.jsx
@@ -84,7 +84,7 @@ export const fetchProductById = (id) =>
 
 //Wishlist service.js
 
-const API = "http://localhost:5000/api/wishlist";
+const API = "https://candlesecommerceproject.onrender.com/api/wishlist";
 const WISHLIST_KEY = "wishlist";
 
 const getToken = () => localStorage.getItem("token");
@@ -383,7 +383,7 @@ export const removeFromCartAuth = async (productId) => {
 };*/
 export const removeFromCartAuth = async (productId) => {
   const res = await axios.delete(
-    `http://localhost:5000/api/cart/${productId}`,
+    `https://candlesecommerceproject.onrender.com/api/cart/${productId}`,
     {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,

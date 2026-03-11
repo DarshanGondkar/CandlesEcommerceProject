@@ -35,7 +35,7 @@ const getImageUrl = (product) => {
 
   return image.startsWith("http")
     ? image
-    : `http://localhost:5000/${image}`;
+    : `https://candlesecommerceproject.onrender.com/${image}`;
 };
 useEffect(() => {
   const loadWishlist = async () => {

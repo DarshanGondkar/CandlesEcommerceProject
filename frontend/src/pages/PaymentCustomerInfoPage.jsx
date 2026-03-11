@@ -49,7 +49,7 @@ const handleNewsletterSubscribe = async () => {
   setSubscribeLoading(true);
 
   try {
-    const res = await fetch("http://localhost:5000/api/subscribe", {
+    const res = await fetch("https://candlesecommerceproject.onrender.com/api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ const applyDiscount = async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:5000/api/verify-discount", {
+    const res = await fetch("https://candlesecommerceproject.onrender.com/api/verify-discount", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

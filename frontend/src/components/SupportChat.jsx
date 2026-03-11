@@ -16,7 +16,7 @@ const messagesEndRef = useRef(null);
     setMessages(prev => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/support-chat", {
+      const res = await axios.post("https://candlesecommerceproject.onrender.com/api/support-chat", {
         message: input
       });
 

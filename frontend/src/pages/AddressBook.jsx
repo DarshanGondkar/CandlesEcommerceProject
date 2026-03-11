@@ -5,7 +5,7 @@ import Footer2 from "./Footer2";
 import { getUser, isAuthenticated } from "../utils/auth";
 import axios from "axios"; // Your API client
 import { showError, showInfo, showSuccess } from "../utils/toast";
-const API_URL = 'http://localhost:5000/api'; // ✅ HARDCODE (like your authService)
+const API_URL = 'https://candlesecommerceproject.onrender.com/api'; // ✅ HARDCODE (like your authService)
 
 
 const AddressBook = () => {

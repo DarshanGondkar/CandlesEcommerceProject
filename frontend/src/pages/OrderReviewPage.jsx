@@ -6,7 +6,7 @@ import { isAuthenticated, getUser } from "../utils/auth";
 
 import { showSuccess, showError, showInfo } from "../utils/toast";
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://candlesecommerceproject.onrender.com/api';
 
 export default function OrderReviewPage() {
   const navigate = useNavigate();

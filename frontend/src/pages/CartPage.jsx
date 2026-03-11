@@ -69,7 +69,7 @@ const updateQty = async (id, delta) => {
     const changedItem = updated.find((item) => item._id === id);
 
     if (isAuthenticated()) {
-      await fetch("http://localhost:5000/api/cart/update", {
+      await fetch("https://candlesecommerceproject.onrender.com/api/cart/update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

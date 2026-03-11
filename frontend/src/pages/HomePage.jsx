@@ -39,7 +39,7 @@ const getImageUrl = (item) => {
   }
 
   // If local upload
-  return `http://localhost:5000${img}`;
+  return `https://candlesecommerceproject.onrender.com${img}`;
 };
 
 const slides = [
@@ -106,7 +106,7 @@ const handleSubscribe = async (e) => {
   setLoading(true);
 
   try {
-    const res = await fetch("http://localhost:5000/api/subscribe", {
+    const res = await fetch("https://candlesecommerceproject.onrender.com/api/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -138,7 +138,7 @@ useEffect(() => {
       const recentId = localStorage.getItem("recentProduct");
 
       const { data } = await axios.get(
-        "http://localhost:5000/api/recommendations",
+        "https://candlesecommerceproject.onrender.com/api/recommendations",
         {
           params: { recentId }   // ✅ SEND recentId
         }
@@ -186,7 +186,7 @@ useEffect(() => {
     const userId = userInfo?._id;
 
     const { data } = await axios.get(
-      `http://localhost:5000/api/recommendations?userId=${userId}&recentId=${recentId}`
+      `https://candlesecommerceproject.onrender.com/api/recommendations?userId=${userId}&recentId=${recentId}`
     );
 
     setRecommended(data);

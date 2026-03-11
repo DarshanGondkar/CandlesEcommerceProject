@@ -56,7 +56,7 @@ useEffect(() => {
         
         // Fetch cart count from backend
         try {
-          const cartRes = await fetch("http://localhost:5000/api/cart", {
+          const cartRes = await fetch("https://candlesecommerceproject.onrender.com/api/cart", {
             headers: { Authorization: `Bearer ${token}` }
           });
           const cartData = await cartRes.json();
@@ -68,7 +68,7 @@ useEffect(() => {
 
         // Fetch wishlist count from backend
         try {
-          const wishlistRes = await fetch("http://localhost:5000/api/wishlist", {
+          const wishlistRes = await fetch("https://candlesecommerceproject.onrender.com/api/wishlist", {
             headers: { Authorization: `Bearer ${token}` }
           });
           const wishlistData = await wishlistRes.json();

@@ -44,7 +44,7 @@ const handleForgotPassword = async (e) => {
   
   try {
     // ✅ REAL API CALL to backend /api/auth/forgot-password
-    const res = await fetch('http://localhost:5000/api/auth/forgot-password', {
+    const res = await fetch('https://candlesecommerceproject.onrender.com/api/auth/forgot-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: resetEmail })

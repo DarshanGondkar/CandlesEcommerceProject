@@ -28,7 +28,7 @@ export default function PaymentPage() {
 
   const createRazorpayOrder = async (orderData) => {
     try {
-      const response = await axios.post("http://localhost:5000/api/payment/create-order", {
+      const response = await axios.post("https://candlesecommerceproject.onrender.com/api/payment/create-order", {
         amount: Number(orderData.total),
         receipt: `lumina_${orderData.id}`,
         orderId: orderData.id
@@ -78,7 +78,7 @@ export default function PaymentPage() {
 
   try {
     // 🔥 CALL BACKEND VERIFY ROUTE
-    await axios.post("http://localhost:5000/api/payment/verify-payment", {
+    await axios.post("https://candlesecommerceproject.onrender.com/api/payment/verify-payment", {
       razorpay_order_id: response.razorpay_order_id,
       razorpay_payment_id: response.razorpay_payment_id,
       razorpay_signature: response.razorpay_signature,
